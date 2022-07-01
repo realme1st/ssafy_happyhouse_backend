@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ssafy.happyhouse.model.mapper.AptAroundMapper">
+
+	<select id="getHospitalByGugun" resultType="hospital">
+		select name, address, tel, type from hospital where sido = left(#{sido},2) and gugun = #{gugun}
+	</select>
+	
+	
+</mapper>
